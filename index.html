@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Daily Read</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Georgia', serif;
+      background: #fafaf8;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+    .masthead {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 28px 32px 22px;
+      border-bottom: 3px solid #c8a96e;
+    }
+    .masthead .edition {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #c8a96e;
+      margin-bottom: 8px;
+    }
+    .masthead h1 {
+      font-size: 2.6rem;
+      letter-spacing: 0.08em;
+      font-weight: 900;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+    .masthead .tagline {
+      font-style: italic;
+      color: #888;
+      font-size: 0.82rem;
+      margin-top: 8px;
+    }
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 36px 24px 48px;
+    }
+    .section {
+      margin-bottom: 44px;
+      padding-bottom: 44px;
+      border-bottom: 1px solid #e8e5de;
+    }
+    .section:last-child { border-bottom: none; margin-bottom: 0; }
+    .section-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .tag {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border-radius: 2px;
+      color: #fff;
+      font-weight: 700;
+    }
+    .tag.history { background: #7a5c1a; }
+    .tag.geo     { background: #1a4a7a; }
+    .tag.us      { background: #7a1a1a; }
+    .tag.now     { background: #1a5c3a; }
+    .section-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #888;
+    }
+    .section h2 {
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 16px;
+      color: #111;
+    }
+    .section p {
+      font-size: 0.94rem;
+      color: #2d2d2d;
+      margin-bottom: 14px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+    .pullquote {
+      border-left: 3px solid #c8a96e;
+      background: #f7f4ec;
+      padding: 14px 18px;
+      margin: 18px 0;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.6;
+    }
+    .pullquote strong {
+      display: block;
+      font-style: normal;
+      color: #333;
+      margin-top: 6px;
+      font-size: 0.85rem;
+    }
+    .news-list {
+      list-style: none;
+      padding: 0;
+    }
+    .news-list li {
+      display: flex;
+      gap: 14px;
+      padding: 13px 0;
+      border-bottom: 1px solid #f0ede6;
+      align-items: flex-start;
+    }
+    .news-list li:last-child { border-bottom: none; }
+    .news-list .emoji {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      line-height: 1.5;
+    }
+    .news-list .item-text strong {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 3px;
+      line-height: 1.3;
+    }
+    .news-list .item-text span {
+      font-size: 0.87rem;
+      color: #444;
+      line-height: 1.55;
+    }
+    .divider {
+      text-align: center;
+      color: #c8a96e;
+      letter-spacing: 0.4em;
+      font-size: 0.9rem;
+      margin: 28px 0;
+    }
+    .footer {
+      text-align: center;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.72rem;
+      color: #bbb;
+      letter-spacing: 0.08em;
+      padding: 24px;
+      border-top: 1px solid #e8e5de;
+    }
+    b { color: #111; }
+  </style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="edition">Tuesday · June 16, 2026</div>
+  <h1>The Daily Read</h1>
+  <div class="tagline">Five minutes. Know more than you did yesterday.</div>
+</div>
+
+<div class="content">
+
+  <!-- ── HISTORICAL LEADER ── -->
+  <div class="section">
+    <div class="section-eyebrow">
+      <span class="tag history">History</span>
+      <span class="section-label">Leader of the Day</span>
+    </div>
+    <h2>Julius Caesar: The Man Who Broke the Republic</h2>
+
+    <p>Born in 100 BC into a patrician family of modest means, Gaius Julius Caesar would spend his entire life proving that ambition, intellect, and calculated risk can reshape civilization. He was not born into power — he methodically constructed it.</p>
+
+    <div class="pullquote">"Experience is the teacher of all things."<strong>— Julius Caesar, Commentarii de Bello Civili</strong></div>
+
+    <p><b>The debt strategy.</b> Caesar entered politics deliberately in debt. He borrowed staggering sums to fund public games, temples, and gifts to Roman citizens — purchasing popularity before power. He understood that in a republic, the crowd is the real currency. He rose through Rome's ladder of offices, reaching consul in 59 BC via an alliance with Pompey and Crassus — the First Triumvirate. Three men quietly split control of the world's most powerful state.</p>
+
+    <p><b>Ten years in Gaul.</b> Caesar's campaigns in Gaul (58–50 BC) are among history's most studied military operations. He conquered territory roughly the size of modern France, fought over 50 battles, and built a personal army of 40,000 soldiers who were loyal to <em>him</em>, not Rome. His <em>Gallic Wars</em> — written in third person, as propaganda — is still taught in military academies. He was manufacturing his own legend in real time.</p>
+
+    <p><b>Crossing the Rubicon.</b> In 49 BC, the Senate ordered Caesar to disband his army and return to Rome as a private citizen. Instead, he crossed the Rubicon — the legal boundary separating his province from Italy — with his legion intact. "The die is cast." This was treason. Civil war began. Within 18 months, Caesar controlled Rome.</p>
+
+    <p><b>Dictator Perpetuo.</b> As dictator, Caesar moved fast. He reformed the calendar (the Julian calendar — we still use its descendant), restructured the Senate, cancelled debts, extended Roman citizenship, and launched infrastructure across the empire. Efficient, effective, autocratic. The Senate gave him the title <em>Dictator in Perpetuity</em>. It was effectively a death sentence.</p>
+
+    <p><b>The Ides of March.</b> On March 15, 44 BC, 23 senators stabbed Caesar 23 times in the Theatre of Pompey. They called themselves <em>Liberatores</em> — liberators. The Republic they hoped to restore never came back. Civil war erupted. Caesar's heir Octavian became Augustus — Rome's first emperor. The men who killed Caesar to save the Republic finished it instead.</p>
+
+    <div class="pullquote">
+      <b>Why this matters now:</b> Caesar is the eternal template for the leader who dismantles institutions in the name of efficiency — who accumulates power legally until legal stops meaning anything. His story is simultaneously a warning and a playbook, studied by Napoleon, Lincoln, and every political strategist since. The pattern of the popular leader who bends the rules until they break is not ancient history.
+    </div>
+  </div>
+
+  <!-- ── GEOPOLITICS ── -->
+  <div class="section">
+    <div class="section-eyebrow">
+      <span class="tag geo">Geopolitics</span>
+      <span class="section-label">World This Week</span>
+    </div>
+    <h2>US & Iran Strike Initial Peace Deal — The Middle East Holds Its Breath</h2>
+
+    <p>Yesterday (June 15), the US and Iran announced an initial agreement to end hostilities and reopen the Strait of Hormuz. The deal extends the April ceasefire by 60 days while permanent terms are negotiated — mediated by Pakistan. Iran's nuclear program remains the hardest unresolved issue, deliberately set aside for later talks.</p>
+
+    <p>The Strait of Hormuz is the chokepoint for roughly 20% of the world's oil supply. Its closure since April has been a slow-motion economic shock. Markets moved sharply on the announcement.</p>
+
+    <div class="pullquote">The deal doesn't resolve the nuclear question — it just buys time. Watch whether Iran's hardliners accept the framework or torpedo it from the inside.<strong>— The bigger picture</strong></div>
+
+    <p><b>Elsewhere:</b> Russia has quietly rebuilt its long-range strike production to outpace NATO — exhausted stockpiles from the Ukraine war have been replaced by domestic capacity. Colombia holds a presidential runoff June 21. Armenia's June 7 election affects the fragile Azerbaijan peace process.</p>
+  </div>
+
+  <!-- ── US POLITICS ── -->
+  <div class="section">
+    <div class="section-eyebrow">
+      <span class="tag us">US Politics</span>
+      <span class="section-label">Domestic Pulse</span>
+    </div>
+    <h2>Senate Debates the Iran Deal; Medicaid Cuts Draw Fire; Vance Gets a New Chief of Staff</h2>
+
+    <p>The Senate convened today with Iran front and center. Minority Leader Schumer addressed the Iran deal terms alongside a push on the "Anti-Weaponization Fund" and childcare spending. Majority Leader Thune focused on appropriations — Congress still hasn't passed a full budget for this fiscal year. Senator Durbin hit the floor on Medicaid cuts embedded in the current budget reconciliation bill.</p>
+
+    <p><b>VP office shake-up:</b> Nick Luna replaces Jacob Reses as VP JD Vance's chief of staff. Personnel changes at the VP level often signal shifting political priorities heading into midterm season.</p>
+
+    <p><b>Midterm environment forming:</b> Primary elections ran in Oklahoma today (Senate seat). Georgia House runoffs were decided. Democrats are targeting suburban seats; Republicans are eyeing the Iran deal as a foreign policy win. November is closer than it feels.</p>
+  </div>
+
+  <!-- ── NOW ── -->
+  <div class="section">
+    <div class="section-eyebrow">
+      <span class="tag now">Now</span>
+      <span class="section-label">Worth Knowing</span>
+    </div>
+    <h2>What's Moving the World Right Now</h2>
+
+    <ul class="news-list">
+      <li>
+        <span class="emoji">🚀</span>
+        <div class="item-text">
+          <strong>SpaceX just IPO'd — at $1.77 trillion</strong>
+          <span>The largest IPO in recorded history. Stock jumped 30% on day one. Buried in the filing: SpaceX warned investors that <em>water access</em> is becoming a critical bottleneck for AI data center expansion. Nobody saw that coming.</span>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">🤖</span>
+        <div class="item-text">
+          <strong>Anthropic overtook OpenAI in business adoption</strong>
+          <span>First time ever: more American businesses pay for Claude than ChatGPT (34.4% vs 32.3% in April). The AI race just changed leaders — quietly.</span>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">🧬</span>
+        <div class="item-text">
+          <strong>CRISPR showing 92% cure rates for sickle cell disease</strong>
+          <span>Gene-editing trials are producing numbers that would've been considered impossible five years ago. FDA expanded approvals are actively under review.</span>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">🩸</span>
+        <div class="item-text">
+          <strong>One blood draw. 50+ cancer types screened.</strong>
+          <span>CancerGuard launched this year — a single blood test that detects over 50 cancers simultaneously. Early detection is the biggest lever in cancer survival. This is a big deal.</span>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">🇨🇳</span>
+        <div class="item-text">
+          <strong>China's humanoid robot companies racing toward billion-dollar IPOs</strong>
+          <span>Beijing is doing to robotics what it did to EVs: state-backed, fast, targeting global scale. The US has a window. It's closing.</span>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">🇪🇺</span>
+        <div class="item-text">
+          <strong>Europe launched a "Tech Sovereignty Package"</strong>
+          <span>The EU's Cloud & AI Development Act + Chips Act 2 aim to cut dependence on US and Asian tech. The bloc is building its own stack. Seriously this time.</span>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">🔒</span>
+        <div class="item-text">
+          <strong>AI systems are now the target, not just the tool</strong>
+          <span>Hackers manipulated AI customer support systems to breach Instagram accounts at scale. A new attack surface that most companies aren't defended against yet.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  THE DAILY READ &nbsp;·&nbsp; Curated by Claude &nbsp;·&nbsp; Every morning at 7:00 AM
+</div>
+
+</body>
+</html>
