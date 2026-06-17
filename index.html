@@ -6,295 +6,182 @@
   <title>The Daily Read</title>
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="icon" type="image/png" href="./apple-touch-icon.png">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <style>
     :root { color-scheme: light; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Georgia', serif;
-      background: #fafaf8;
-      color: #1a1a1a;
-      line-height: 1.7;
-    }
-    .masthead {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 28px 32px 22px;
-      border-bottom: 3px solid #c8a96e;
-    }
-    .masthead .edition {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.68rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: #c8a96e;
-      margin-bottom: 8px;
-    }
-    .masthead h1 {
-      font-size: 2.6rem;
-      letter-spacing: 0.08em;
-      font-weight: 900;
-      line-height: 1;
-      text-transform: uppercase;
-    }
-    .masthead .tagline {
-      font-style: italic;
-      color: #888;
-      font-size: 0.82rem;
-      margin-top: 8px;
-    }
-    .content {
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 36px 24px 48px;
-    }
-    .section {
-      margin-bottom: 44px;
-      padding-bottom: 44px;
-      border-bottom: 1px solid #e8e5de;
-    }
+    body { font-family: 'Georgia', serif; background: #fafaf8; color: #1a1a1a; line-height: 1.7; }
+    .masthead { background: #111; color: #fff; text-align: center; padding: 28px 32px 22px; border-bottom: 3px solid #c8a96e; }
+    .masthead .edition { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase; color: #c8a96e; margin-bottom: 8px; }
+    .masthead h1 { font-size: 2.6rem; letter-spacing: 0.08em; font-weight: 900; line-height: 1; text-transform: uppercase; }
+    .masthead .tagline { font-style: italic; color: #888; font-size: 0.82rem; margin-top: 8px; }
+    .content { max-width: 680px; margin: 0 auto; padding: 36px 24px 48px; }
+    .section { margin-bottom: 44px; padding-bottom: 44px; border-bottom: 1px solid #e8e5de; }
     .section:last-child { border-bottom: none; margin-bottom: 0; }
-    .section-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    .tag {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.6rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      padding: 4px 9px;
-      border-radius: 2px;
-      color: #fff;
-      font-weight: 700;
-    }
+    .section-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .tag { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; padding: 4px 9px; border-radius: 2px; color: #fff; font-weight: 700; }
     .tag.history { background: #7a5c1a; }
-    .tag.geo     { background: #1a4a7a; }
-    .tag.us      { background: #7a1a1a; }
-    .tag.now     { background: #1a5c3a; }
-    .section-label {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #888;
-    }
-    .section h2 {
-      font-size: 1.55rem;
-      font-weight: 700;
-      line-height: 1.25;
-      margin-bottom: 16px;
-      color: #111;
-    }
-    .section p {
-      font-size: 0.94rem;
-      color: #2d2d2d;
-      margin-bottom: 14px;
-    }
+    .tag.geo { background: #1a4a7a; }
+    .tag.us { background: #7a1a1a; }
+    .tag.now { background: #1a5c3a; }
+    .section-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: #888; }
+    .section h2 { font-size: 1.55rem; font-weight: 700; line-height: 1.25; margin-bottom: 16px; color: #111; }
+    .section p { font-size: 0.94rem; color: #2d2d2d; margin-bottom: 14px; }
     .section p:last-child { margin-bottom: 0; }
-    .pullquote {
-      border-left: 3px solid #c8a96e;
-      background: #f7f4ec;
-      padding: 14px 18px;
-      margin: 18px 0;
-      font-style: italic;
-      font-size: 0.9rem;
-      color: #555;
-      line-height: 1.6;
-    }
-    .pullquote strong {
-      display: block;
-      font-style: normal;
-      color: #333;
-      margin-top: 6px;
-      font-size: 0.85rem;
-    }
-    .news-list {
-      list-style: none;
-      padding: 0;
-    }
-    .news-list li {
-      display: flex;
-      gap: 14px;
-      padding: 13px 0;
-      border-bottom: 1px solid #f0ede6;
-      align-items: flex-start;
-    }
+    .pullquote { border-left: 3px solid #c8a96e; background: #f7f4ec; padding: 14px 18px; margin: 18px 0; font-style: italic; font-size: 0.9rem; color: #555; line-height: 1.6; }
+    .pullquote strong { display: block; font-style: normal; color: #333; margin-top: 6px; font-size: 0.85rem; }
+    .why-box { background: #f0f4f8; border: 1px solid #c8d8e8; border-radius: 4px; padding: 16px 18px; margin: 18px 0; }
+    .why-box .why-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: #1a4a7a; font-weight: 700; margin-bottom: 7px; }
+    .why-box p { font-size: 0.88rem; color: #2a3a4a; margin-bottom: 0; line-height: 1.6; }
+    .news-list { list-style: none; padding: 0; }
+    .news-list li { display: flex; gap: 14px; padding: 13px 0; border-bottom: 1px solid #f0ede6; align-items: flex-start; }
     .news-list li:last-child { border-bottom: none; }
-    .news-list .emoji {
-      font-size: 1.1rem;
-      flex-shrink: 0;
-      line-height: 1.5;
-    }
-    .news-list .item-text strong {
-      display: block;
-      font-size: 0.92rem;
-      font-weight: 700;
-      color: #111;
-      margin-bottom: 3px;
-      line-height: 1.3;
-    }
-    .news-list .item-text span {
-      font-size: 0.87rem;
-      color: #444;
-      line-height: 1.55;
-    }
-    .divider {
-      text-align: center;
-      color: #c8a96e;
-      letter-spacing: 0.4em;
-      font-size: 0.9rem;
-      margin: 28px 0;
-    }
-    .footer {
-      text-align: center;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      font-size: 0.72rem;
-      color: #bbb;
-      letter-spacing: 0.08em;
-      padding: 24px;
-      border-top: 1px solid #e8e5de;
-    }
+    .news-list .emoji { font-size: 1.1rem; flex-shrink: 0; line-height: 1.5; }
+    .news-list .item-text strong { display: block; font-size: 0.92rem; font-weight: 700; color: #111; margin-bottom: 3px; line-height: 1.3; }
+    .news-list .item-text span { font-size: 0.87rem; color: #444; line-height: 1.55; }
+    .also-watching { background: #f7f4ec; border-left: 3px solid #1a4a7a; padding: 14px 18px; margin: 18px 0; }
+    .also-watching .aw-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: #1a4a7a; font-weight: 700; margin-bottom: 8px; }
+    .also-watching ul { list-style: none; padding: 0; }
+    .also-watching ul li { font-size: 0.87rem; color: #333; padding: 3px 0; line-height: 1.55; }
+    .also-watching ul li::before { content: "→ "; color: #c8a96e; font-weight: 700; }
+    .footer { text-align: center; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 0.72rem; color: #bbb; letter-spacing: 0.08em; padding: 24px; border-top: 1px solid #e8e5de; }
     b { color: #111; }
   </style>
 </head>
 <body>
-
 <div class="masthead">
-  <div class="edition">Tuesday · June 16, 2026</div>
+  <div class="edition">WEDNESDAY · JUNE 17, 2026</div>
   <h1>The Daily Read</h1>
   <div class="tagline">Five minutes. Know more than you did yesterday.</div>
 </div>
-
 <div class="content">
 
-  <!-- ── HISTORICAL LEADER ── -->
+  <!-- SECTION 1: HISTORICAL LEADER -->
   <div class="section">
     <div class="section-eyebrow">
-      <span class="tag history">History</span>
-      <span class="section-label">Leader of the Day</span>
+      <span class="tag history">Historical Leader</span>
+      <span class="section-label">Lessons from the past</span>
     </div>
-    <h2>Julius Caesar: The Man Who Broke the Republic</h2>
-
-    <p>Born in 100 BC into a patrician family of modest means, Gaius Julius Caesar would spend his entire life proving that ambition, intellect, and calculated risk can reshape civilization. He was not born into power — he methodically constructed it.</p>
-
-    <div class="pullquote">"Experience is the teacher of all things."<strong>— Julius Caesar, Commentarii de Bello Civili</strong></div>
-
-    <p><b>The debt strategy.</b> Caesar entered politics deliberately in debt. He borrowed staggering sums to fund public games, temples, and gifts to Roman citizens — purchasing popularity before power. He understood that in a republic, the crowd is the real currency. He rose through Rome's ladder of offices, reaching consul in 59 BC via an alliance with Pompey and Crassus — the First Triumvirate. Three men quietly split control of the world's most powerful state.</p>
-
-    <p><b>Ten years in Gaul.</b> Caesar's campaigns in Gaul (58–50 BC) are among history's most studied military operations. He conquered territory roughly the size of modern France, fought over 50 battles, and built a personal army of 40,000 soldiers who were loyal to <em>him</em>, not Rome. His <em>Gallic Wars</em> — written in third person, as propaganda — is still taught in military academies. He was manufacturing his own legend in real time.</p>
-
-    <p><b>Crossing the Rubicon.</b> In 49 BC, the Senate ordered Caesar to disband his army and return to Rome as a private citizen. Instead, he crossed the Rubicon — the legal boundary separating his province from Italy — with his legion intact. "The die is cast." This was treason. Civil war began. Within 18 months, Caesar controlled Rome.</p>
-
-    <p><b>Dictator Perpetuo.</b> As dictator, Caesar moved fast. He reformed the calendar (the Julian calendar — we still use its descendant), restructured the Senate, cancelled debts, extended Roman citizenship, and launched infrastructure across the empire. Efficient, effective, autocratic. The Senate gave him the title <em>Dictator in Perpetuity</em>. It was effectively a death sentence.</p>
-
-    <p><b>The Ides of March.</b> On March 15, 44 BC, 23 senators stabbed Caesar 23 times in the Theatre of Pompey. They called themselves <em>Liberatores</em> — liberators. The Republic they hoped to restore never came back. Civil war erupted. Caesar's heir Octavian became Augustus — Rome's first emperor. The men who killed Caesar to save the Republic finished it instead.</p>
+    <h2>John D. Rockefeller: The Man Who Understood That Control of the Pipes Is Control of the World</h2>
+    <p>On a day when Iranian tankers are running oil past a US military blockade in the Gulf of Oman, it's worth revisiting the man who understood energy infrastructure as a geopolitical weapon before most governments had thought to ask the question. John D. Rockefeller didn't just build a company. He engineered a system so complete, so interlocking, that an entire industrial civilization had to run through it whether it wanted to or not.</p>
+    <p>Rockefeller was born in 1839 in Richford, New York, to a con-man father who was perpetually absent and a devoutly Baptist mother who instilled in him a ferocious discipline around money from childhood. By sixteen he was keeping meticulous ledgers of every penny he earned or spent — a habit he maintained for the rest of his life. He entered the commodity trading business in Cleveland at nineteen and had already made his first small fortune by the time the Civil War ended. He saw oil not as a gold rush but as a systems problem. Everyone else was drilling. Rockefeller asked: who refines, who stores, and who moves it?</p>
+    <p>The answer he built was Standard Oil, incorporated in 1870. His core insight — deceptively simple, ruthlessly executed — was that the refinery, not the well, was the chokepoint. He negotiated secret rebates from railroads for the volume of oil he shipped, then used those lower costs to undercut competitors and buy them out or bankrupt them. When refiners in Cleveland refused to sell, he showed them his books: your cost per barrel, my cost per barrel, how long you survive at current margins. Most sold. By 1879, nine years after incorporation, Standard Oil controlled roughly 90% of US refining capacity.</p>
+    <p>What made Rockefeller genuinely different from the robber barons of his era was his obsessive focus on operational efficiency over financial engineering. He didn't want to gouge customers — he wanted the cheapest, most reliable system, because volume was the game. The price of kerosene dropped dramatically during Standard's peak years, which meant ordinary Americans could actually afford to light their homes at night. The monopoly was real, the methods were cutthroat, but the product got cheaper and better. That tension — between systemic harm and consumer benefit — is one the tech world is still arguing about today.</p>
+    <p>His turning point came not from a competitor but from a journalist. Ida Tarbell's 19-part exposé in <i>McClure's Magazine</i>, published between 1902 and 1904, systematically documented Standard's predatory tactics with primary sources Rockefeller couldn't dismiss. Public outrage followed. In 1911, the Supreme Court ordered Standard Oil broken into 34 independent companies. Rockefeller, already retired, watched the breakup from a golf course — and became even richer as each fragment's share price soared. He lived to 97, gave away over $500 million in his lifetime, and founded the University of Chicago and the Rockefeller Institute for Medical Research.</p>
 
     <div class="pullquote">
-      <b>Why this matters now:</b> Caesar is the eternal template for the leader who dismantles institutions in the name of efficiency — who accumulates power legally until legal stops meaning anything. His story is simultaneously a warning and a playbook, studied by Napoleon, Lincoln, and every political strategist since. The pattern of the popular leader who bends the rules until they break is not ancient history.
+      "I would rather earn 1% off a hundred people's efforts than 100% of my own efforts."
+      <strong>— John D. Rockefeller</strong>
+    </div>
+
+    <p>His legacy is the original template for platform monopoly: own the infrastructure layer, let others do the risky exploration, and clip a margin on everything that flows through your pipes. Standard Oil's structural DNA — control the distribution layer, use scale to crush marginal costs, acquire or starve competitors — is visible in how cloud computing, payment rails, and app store ecosystems operate today. The Sherman Antitrust Act that broke him up is the same legal framework now being wielded against tech giants. History doesn't repeat, but the architecture of dominance rhymes with startling precision.</p>
+    <p>The hard lesson Rockefeller leaves builders: efficiency and monopoly can coexist, customers can benefit and still be harmed simultaneously, and the system you design will eventually be judged not on what it delivered but on who it excluded and how. Tarbell didn't care that kerosene was cheaper. She cared that no one could enter the market. That is still the question regulators ask about every dominant platform built today.</p>
+
+    <div class="why-box">
+      <div class="why-label">Why It Matters Today</div>
+      <p>Three Iranian tankers loaded with crude oil slipped past a US military blockade in the Gulf of Oman today. The story looks like a military standoff, but it's fundamentally a Rockefellerian question: who controls the pipes? Oil infrastructure — tankers, straits, terminals — has always been the real leverage point in geopolitical conflict, not the wells themselves. The US blockade attempts to weaponize the distribution layer, precisely the move Rockefeller invented in a commercial context. Iran's ability to route around it, even partially, illustrates a principle Rockefeller would have recognized immediately: when your product is essential enough and your adversary's control of the chokepoint is incomplete, you find the leak in the pipe. Every sanction regime, every tech export ban, every attempt to control access to a critical layer of infrastructure eventually encounters this same structural problem.</p>
     </div>
   </div>
 
-  <!-- ── GEOPOLITICS ── -->
+  <!-- SECTION 2: GEOPOLITICS -->
   <div class="section">
     <div class="section-eyebrow">
       <span class="tag geo">Geopolitics</span>
-      <span class="section-label">World This Week</span>
+      <span class="section-label">World in motion</span>
     </div>
-    <h2>US & Iran Strike Initial Peace Deal — The Middle East Holds Its Breath</h2>
+    <h2>Iran Runs the Blockade — Three Tankers, Zero Stopped</h2>
+    <p>Ship-tracking data confirmed Wednesday that three Iranian tankers loaded with crude oil successfully passed the US military blockade line in the Gulf of Oman. The passage is a significant test of the enforcement mechanism Washington has been using to strangle Iranian oil revenues under renewed maximum pressure sanctions. A blockade that can be run is not a blockade — it's a deterrent that has been called. The optics matter as much as the oil: Iran just demonstrated, publicly and with receipts, that the US naval cordon has gaps. Expect Tehran to push that data point hard in any forthcoming nuclear or sanctions negotiations, and expect the administration to face serious questions about whether naval interdiction alone is sufficient to meaningfully restrict Iran's export capacity when buyers willing to absorb the risk remain available.</p>
 
-    <p>Yesterday (June 15), the US and Iran announced an initial agreement to end hostilities and reopen the Strait of Hormuz. The deal extends the April ceasefire by 60 days while permanent terms are negotiated — mediated by Pakistan. Iran's nuclear program remains the hardest unresolved issue, deliberately set aside for later talks.</p>
-
-    <p>The Strait of Hormuz is the chokepoint for roughly 20% of the world's oil supply. Its closure since April has been a slow-motion economic shock. Markets moved sharply on the announcement.</p>
-
-    <div class="pullquote">The deal doesn't resolve the nuclear question — it just buys time. Watch whether Iran's hardliners accept the framework or torpedo it from the inside.<strong>— The bigger picture</strong></div>
-
-    <p><b>Elsewhere:</b> Russia has quietly rebuilt its long-range strike production to outpace NATO — exhausted stockpiles from the Ukraine war have been replaced by domestic capacity. Colombia holds a presidential runoff June 21. Armenia's June 7 election affects the fragile Azerbaijan peace process.</p>
+    <div class="also-watching">
+      <div class="aw-label">Also Watching</div>
+      <ul>
+        <li><b>Lebanon:</b> Israel launched fresh strikes despite direct criticism from Trump, who said Netanyahu needed to "be more responsible." A sitting US president publicly rebuking an ally mid-operation is an unusual signal — watch whether Israeli military tempo actually changes or whether this is messaging for a domestic US audience.</li>
+        <li><b>Jerusalem:</b> Israeli nationalists are increasingly flouting the longstanding status quo governing worship at the al-Aqsa compound. Each incremental violation raises the floor for what's considered normal, which is precisely how fragile arrangements collapse without a single triggering moment.</li>
+        <li><b>DR Congo:</b> Armed men stormed a hospital holding a six-year-old Ebola patient, forcing health workers to flee and the child to go missing. Misinformation-driven attacks on medical infrastructure during an active outbreak are one of the most dangerous feedback loops in epidemic management.</li>
+      </ul>
+    </div>
   </div>
 
-  <!-- ── US POLITICS ── -->
+  <!-- SECTION 3: US POLITICS -->
   <div class="section">
     <div class="section-eyebrow">
       <span class="tag us">US Politics</span>
-      <span class="section-label">Domestic Pulse</span>
+      <span class="section-label">Domestic dispatch</span>
     </div>
-    <h2>Senate Debates the Iran Deal; Medicaid Cuts Draw Fire; Vance Gets a New Chief of Staff</h2>
-
-    <p>The Senate convened today with Iran front and center. Minority Leader Schumer addressed the Iran deal terms alongside a push on the "Anti-Weaponization Fund" and childcare spending. Majority Leader Thune focused on appropriations — Congress still hasn't passed a full budget for this fiscal year. Senator Durbin hit the floor on Medicaid cuts embedded in the current budget reconciliation bill.</p>
-
-    <p><b>VP office shake-up:</b> Nick Luna replaces Jacob Reses as VP JD Vance's chief of staff. Personnel changes at the VP level often signal shifting political priorities heading into midterm season.</p>
-
-    <p><b>Midterm environment forming:</b> Primary elections ran in Oklahoma today (Senate seat). Georgia House runoffs were decided. Democrats are targeting suburban seats; Republicans are eyeing the Iran deal as a foreign policy win. November is closer than it feels.</p>
+    <h2>Georgia Proves a Presidential Endorsement Has a Price Tag — and Rick Jackson Found It</h2>
+    <p>Tuesday's Georgia primaries delivered two results that will define the state's political landscape heading into the general election. Billionaire Rick Jackson spent north of $100 million of his own money to unseat Trump-backed Lieutenant Governor Burt Jones in the governor's race — a direct, expensive proof of concept that the Trump endorsement machine can be overwhelmed by sufficient independent capital. Meanwhile, Mike Collins won the GOP Senate runoff after a last-minute Trump endorsement, setting up a major race against incumbent Democrat Jon Ossoff. Republicans are privately worried: Collins holds abortion positions that Trump himself questioned before ultimately backing him, and Ossoff has been a disciplined fundraiser in a state that's trending competitive. The takeaway for anyone watching power dynamics: the presidential endorsement is still the most valuable free asset in Republican primary politics, but it is not infinite. Jackson just put a dollar figure on its ceiling.</p>
   </div>
 
-  <!-- ── NOW ── -->
+  <!-- SECTION 4: WORTH KNOWING -->
   <div class="section">
     <div class="section-eyebrow">
-      <span class="tag now">Now</span>
-      <span class="section-label">Worth Knowing</span>
+      <span class="tag now">Worth Knowing</span>
+      <span class="section-label">Signal over noise</span>
     </div>
-    <h2>What's Moving the World Right Now</h2>
-
+    <h2>Eight Things That Deserve Your Attention Today</h2>
     <ul class="news-list">
-      <li>
-        <span class="emoji">🚀</span>
-        <div class="item-text">
-          <strong>SpaceX just IPO'd — at $1.77 trillion</strong>
-          <span>The largest IPO in recorded history. Stock jumped 30% on day one. Buried in the filing: SpaceX warned investors that <em>water access</em> is becoming a critical bottleneck for AI data center expansion. Nobody saw that coming.</span>
-        </div>
-      </li>
-      <li>
-        <span class="emoji">🤖</span>
-        <div class="item-text">
-          <strong>Anthropic overtook OpenAI in business adoption</strong>
-          <span>First time ever: more American businesses pay for Claude than ChatGPT (34.4% vs 32.3% in April). The AI race just changed leaders — quietly.</span>
-        </div>
-      </li>
       <li>
         <span class="emoji">🧬</span>
         <div class="item-text">
-          <strong>CRISPR showing 92% cure rates for sickle cell disease</strong>
-          <span>Gene-editing trials are producing numbers that would've been considered impossible five years ago. FDA expanded approvals are actively under review.</span>
+          <strong>Mammalian regeneration may be a switch, not an absence</strong>
+          <span>Scientists showed that complex body-part regeneration in mammals isn't evolutionarily lost — it appears to be epigenetically silenced. A two-stage treatment reactivated regenerative pathways in animal models. If this scales, it rewrites the baseline assumption of regenerative medicine and potentially the economics of tissue engineering startups.</span>
         </div>
       </li>
       <li>
-        <span class="emoji">🩸</span>
+        <span class="emoji">☢️</span>
         <div class="item-text">
-          <strong>One blood draw. 50+ cancer types screened.</strong>
-          <span>CancerGuard launched this year — a single blood test that detects over 50 cancers simultaneously. Early detection is the biggest lever in cancer survival. This is a big deal.</span>
+          <strong>UV light silently breaks down PFAS "forever chemicals" via hydrogen radicals</strong>
+          <span>Researchers identified that intense UV light generates hydrogen radicals capable of cleaving the notoriously stable carbon-fluorine bonds in PFAS compounds — no added reagents required. This is a mechanistic breakthrough, not a deployed solution yet, but it opens a cleaner remediation pathway for contaminated water systems that currently have no good answers.</span>
         </div>
       </li>
       <li>
-        <span class="emoji">🇨🇳</span>
+        <span class="emoji">🕷️</span>
         <div class="item-text">
-          <strong>China's humanoid robot companies racing toward billion-dollar IPOs</strong>
-          <span>Beijing is doing to robotics what it did to EVs: state-backed, fast, targeting global scale. The US has a window. It's closing.</span>
+          <strong>An Amazonian spider evolved to mimic a parasitic fungus — behaviorally, not just visually</strong>
+          <span>The newly described species <i>Taczanowskia waska</i> doesn't just look like Ophiocordyceps fungus; it moves like it too. This is a rare case of behavioral mimicry layered on top of morphological mimicry, which suggests the selective pressure to avoid predation was extreme enough to shape motor patterns. Biomimicry engineers, take notes.</span>
         </div>
       </li>
       <li>
-        <span class="emoji">🇪🇺</span>
+        <span class="emoji">📡</span>
         <div class="item-text">
-          <strong>Europe launched a "Tech Sovereignty Package"</strong>
-          <span>The EU's Cloud & AI Development Act + Chips Act 2 aim to cut dependence on US and Asian tech. The bloc is building its own stack. Seriously this time.</span>
+          <strong>We may be missing alien signals because their own stars are garbling them</strong>
+          <span>A new SETI study argues that turbulent stellar plasma and magnetic storms around transmitting stars could distort or absorb outgoing signals before they escape into interstellar space — meaning our search parameters may be systematically wrong. It's a signal processing and noise modeling problem at astronomical scale, and it implies we should be looking at quieter, more stable star types as preferential sources.</span>
         </div>
       </li>
       <li>
-        <span class="emoji">🔒</span>
+        <span class="emoji">🦭</span>
         <div class="item-text">
-          <strong>AI systems are now the target, not just the tool</strong>
-          <span>Hackers manipulated AI customer support systems to breach Instagram accounts at scale. A new attack surface that most companies aren't defended against yet.</span>
+          <strong>The vaquita porpoise — fewer than 10 alive — now has a complete 3D digital archive</strong>
+          <span>Scientists created high-resolution 3D models of vaquita skeletal anatomy using advanced imaging before the species blinks out entirely. It's part preservation, part research tool — but it also raises the uncomfortable question of whether digital archiving is increasingly becoming the end state of conservation rather than a supplement to it.</span>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">🧲</span>
+        <div class="item-text">
+          <strong>Staple-shaped particles create materials that are simultaneously strong, flexible, and instantly reversible</strong>
+          <span>Scientists found that particles shaped like staples tangle together under certain conditions to form robust structures, then disentangle on demand in seconds. Unlike shape-memory alloys or other smart materials, the transition requires no heat or chemical trigger. Potential applications in reconfigurable robotics, adaptive armor, and programmable manufacturing are immediate and obvious.</span>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">🏥</span>
+        <div class="item-text">
+          <strong>Attacks on Ebola treatment facilities in DRC are forcing health workers to abandon active patients</strong>
+          <span>The armed storming of a hospital holding a six-year-old Ebola patient — who then went missing — is the direct operational consequence of misinformation spreading faster than outbreak containment messaging. This is an information infrastructure failure as much as a security failure, and it's a pattern that has derailed multiple African outbreak responses over the past decade.</span>
+        </div>
+      </li>
+      <li>
+        <span class="emoji">🫁</span>
+        <div class="item-text">
+          <strong>Norway's Crown Princess received a successful lung transplant after years of pulmonary fibrosis</strong>
+          <span>Crown Princess Mette-Marit has lived publicly with progressive pulmonary fibrosis since 2018, and her transplant marks a medical milestone for a disease with historically poor prognosis. Beyond the headline, it's a reminder that organ transplantation remains one of medicine's most profound interventions — and that waiting list dynamics, donor infrastructure, and immunosuppression protocols are areas where biotech still has enormous runway.</span>
         </div>
       </li>
     </ul>
   </div>
 
 </div>
-
-<div class="footer">
-  THE DAILY READ &nbsp;·&nbsp; Curated by Claude &nbsp;·&nbsp; Every morning at 7:00 AM
-</div>
-
+<div class="footer">THE DAILY READ &nbsp;·&nbsp; Curated by Claude &nbsp;·&nbsp; Every morning at 7:00 AM</div>
 </body>
 </html>
