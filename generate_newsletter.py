@@ -99,6 +99,9 @@ OUTPUT RULES:
   <title>The Daily Read</title>
   <link rel="apple-touch-icon" href="./apple-touch-icon.png">
   <link rel="icon" type="image/png" href="./apple-touch-icon.png">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
   <style>
     :root {{ color-scheme: light; }}
     * {{ box-sizing: border-box; margin: 0; padding: 0; }}
